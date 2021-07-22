@@ -1,26 +1,66 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TheHeader />
+  <main class="main">
+    <div class="container">
+      <TabsList />
+      <CardList />
+    </div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/layout/TheHeader.vue";
+import TabsList from "./components/tabs/TabsList.vue";
+import CardList from "./components/cards/CardsList.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    TabsList,
+    CardList,
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: url("./assets/img/bg/main-bg-mobile.jpg") center center/cover
+    no-repeat;
+}
+
+@media (min-width: 1366px) {
+  .main {
+    padding-top: 90px;
+    background-image: url("./assets/img/bg/main-bg-desktop.jpg");
+  }
+  .container {
+    margin: 0 auto;
+    width: 980px;
+  }
 }
 </style>
+
+/*TODO:
+*Перемістити зображення в папку img
+*/

@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import BaseTitle from "./components/ui/BaseTitle.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.component("BaseTitle", BaseTitle);
+
+app.mount("#app");
