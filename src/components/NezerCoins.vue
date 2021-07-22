@@ -1,5 +1,5 @@
 <template>
-  <section class="cards">
+  <section class="nazer-crystals">
     <BaseTitle>Кристаллы Незера</BaseTitle>
     <ul class="cards-list">
       <CardItem
@@ -9,6 +9,7 @@
         :quantity="card.quantity"
         :price="card.price"
         :url="card.url"
+        :bonus="card.bonus"
       />
     </ul>
   </section>
@@ -18,6 +19,9 @@
 import CardItem from "./CardItem.vue";
 
 export default {
+  components: {
+    CardItem,
+  },
   data() {
     return {
       cards: [
@@ -27,9 +31,10 @@ export default {
           quantity: "x500",
           price: 10,
           url: {
-            mobile: require("../../assets/img/crystals-and-bag.png"),
-            desktop: require("../../assets/img/crystals-and-bag.png"),
+            mobile: require("../assets/img/crystals-and-bag.png"),
+            desktop: require("../assets/img/crystals-and-bag.png"),
           },
+          bonus: "x500",
         },
         {
           id: String(Date.now()),
@@ -37,9 +42,10 @@ export default {
           quantity: "x100",
           price: 2,
           url: {
-            mobile: require("../../assets/img/crystals-and-big-bag.png"),
-            desktop: require("../../assets/img/crystals-and-big-bag.png"),
+            mobile: require("../assets/img/crystals-and-big-bag.png"),
+            desktop: require("../assets/img/crystals-and-big-bag.png"),
           },
+          bonus: "x700",
         },
         {
           id: String(Date.now()),
@@ -47,9 +53,10 @@ export default {
           quantity: "x1500",
           price: 5,
           url: {
-            mobile: require("../../assets/img/crystals-and-big-bag-box-chest-bag.png"),
-            desktop: require("../../assets/img/crystals-and-big-bag-box-chest-bag.png"),
+            mobile: require("../assets/img/crystals-and-big-bag-box-chest-bag.png"),
+            desktop: require("../assets/img/crystals-and-big-bag-box-chest-bag.png"),
           },
+          bonus: "x500",
         },
         {
           id: String(Date.now()),
@@ -57,9 +64,10 @@ export default {
           quantity: "x1000",
           price: 4,
           url: {
-            mobile: require("../../assets/img/crystals-and-box.png"),
-            desktop: require("../../assets/img/crystals-and-box.png"),
+            mobile: require("../assets/img/crystals-and-box.png"),
+            desktop: require("../assets/img/crystals-and-box.png"),
           },
+          bonus: "x300",
         },
         {
           id: String(Date.now()),
@@ -67,9 +75,10 @@ export default {
           quantity: "x1500",
           price: 2,
           url: {
-            mobile: require("../../assets/img/crystals-and-chest.png"),
-            desktop: require("../../assets/img/crystals-and-chest.png"),
+            mobile: require("../assets/img/crystals-and-chest.png"),
+            desktop: require("../assets/img/crystals-and-chest.png"),
           },
+          bonus: "x500",
         },
         {
           id: String(Date.now()),
@@ -77,9 +86,10 @@ export default {
           quantity: "x100",
           price: 3,
           url: {
-            mobile: require("../../assets/img/crystals-and-bag.png"),
-            desktop: require("../../assets/img/crystals-and-bag.png"),
+            mobile: require("../assets/img/crystals-and-bag.png"),
+            desktop: require("../assets/img/crystals-and-bag.png"),
           },
+          bonus: "x800",
         },
         {
           id: String(Date.now()),
@@ -87,9 +97,10 @@ export default {
           quantity: "x1500",
           price: 7,
           url: {
-            mobile: require("../../assets/img/crystals-and-big-bag.png"),
-            desktop: require("../../assets/img/crystals-and-big-bag.png"),
+            mobile: require("../assets/img/crystals-and-big-bag.png"),
+            desktop: require("../assets/img/crystals-and-big-bag.png"),
           },
+          bonus: "x600",
         },
         {
           id: String(Date.now()),
@@ -97,9 +108,10 @@ export default {
           quantity: "x1000",
           price: 5,
           url: {
-            mobile: require("../../assets/img/crystals-and-big-bag-box-chest-bag.png"),
-            desktop: require("../../assets/img/crystals-and-big-bag-box-chest-bag.png"),
+            mobile: require("../assets/img/crystals-and-big-bag-box-chest-bag.png"),
+            desktop: require("../assets/img/crystals-and-big-bag-box-chest-bag.png"),
           },
+          bonus: "x200",
         },
         {
           id: String(Date.now()),
@@ -107,21 +119,19 @@ export default {
           quantity: "x100",
           price: 10,
           url: {
-            mobile: require("../../assets/img/crystals-and-box.png"),
-            desktop: require("../../assets/img/crystals-and-box.png"),
+            mobile: require("../assets/img/crystals-and-box.png"),
+            desktop: require("../assets/img/crystals-and-box.png"),
           },
+          bonus: "x900",
         },
       ],
     };
-  },
-  components: {
-    CardItem,
   },
 };
 </script>
 
 <style lang="scss">
-.cards {
+.cardnazer-crystals {
   background-color: #181723;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -137,7 +147,7 @@ export default {
 }
 
 @media (min-width: 1366px) {
-  .cards {
+  .nazer-crystals {
     width: 980px;
     padding: 24px 26px;
     border-radius: 0 0 10px 10px;

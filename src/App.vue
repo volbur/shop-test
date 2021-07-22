@@ -3,7 +3,8 @@
   <main class="main">
     <div class="container">
       <TabsList />
-      <CardList />
+      <NezerCrystals />
+      <NezerCoins />
     </div>
   </main>
 </template>
@@ -11,13 +12,15 @@
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
 import TabsList from "./components/tabs/TabsList.vue";
-import CardList from "./components/cards/CardsList.vue";
+import NezerCrystals from "./components/NezerCrystals.vue";
+import NezerCoins from "./components/NezerCoins.vue";
 
 export default {
   components: {
     TheHeader,
     TabsList,
-    CardList,
+    NezerCrystals,
+    NezerCoins,
   },
 };
 </script>
@@ -45,14 +48,14 @@ img {
 .main {
   width: 100%;
   height: 100%;
-  background: url("./assets/img/bg/main-bg-mobile.jpg") center center/cover
+  background: url("./assets/img/main-bg-mobile.jpg") center center/cover
     no-repeat;
 }
 
 @media (min-width: 1366px) {
   .main {
     padding-top: 90px;
-    background-image: url("./assets/img/bg/main-bg-desktop.jpg");
+    background-image: url("./assets/img/main-bg-desktop.jpg");
   }
   .container {
     margin: 0 auto;

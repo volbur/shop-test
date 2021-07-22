@@ -14,14 +14,14 @@
       </div>
     </button>
     <div class="ribbons">
-      <div class="ribbons__price">x500</div>
+      <div class="ribbons__price">{{ bonus }}</div>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["title", "quantity", "price", "url"],
+  props: ["title", "quantity", "price", "url", "bonus"],
 };
 </script>
 
@@ -29,10 +29,8 @@ export default {
 .card-item {
   position: relative;
   padding-top: 20px;
-  border-radius: 11px;
-  // background: url("../../assets/img/bg/bg-card.png") center center/cover
-  //   no-repeat;
-  background-color: rgb(90, 88, 88);
+  border-radius: 23px;
+  background: url("../assets/img/bg-card.png") center center/cover no-repeat;
   list-style: none;
   overflow: hidden;
   &__img {
@@ -75,7 +73,7 @@ export default {
     &__icon {
       width: 17px;
       height: 17px;
-      background: url("../../assets/img/icons/icon-crystals-mobile.png") center
+      background: url("../assets/img/icon-crystals-mobile.png") center
         center/cover no-repeat;
     }
   }
@@ -104,8 +102,8 @@ export default {
         display: inline-block;
         width: 14px;
         height: 14px;
-        background: url("../../assets/img/icons/icon-one-coin-mobile.png")
-          center center/cover no-repeat;
+        background: url("../assets/img/icon-one-coin-mobile.png") center
+          center/cover no-repeat;
       }
     }
   }
@@ -145,7 +143,7 @@ export default {
         margin-right: 4px;
         width: 8px;
         height: 14px;
-        background-image: url("../../assets/img/icons/$.png");
+        background-image: url("../assets/img/$.png");
       }
     }
     .ribbons {
@@ -159,7 +157,7 @@ export default {
           left: 34px;
           width: 17px;
           height: 17px;
-          background-image: url("../../assets/img/icons/icon-one-coin-desktop.png");
+          background-image: url("../assets/img/icon-one-coin-desktop.png");
         }
       }
     }

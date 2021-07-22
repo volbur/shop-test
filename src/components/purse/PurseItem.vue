@@ -71,7 +71,7 @@ export default {
         display: inline-block;
         width: 14px;
         height: 14px;
-        background: url("../../assets/img/icons/icon-plus.png") center
+        background: url("../../assets/img/icon-plus.png") center
           center/cover no-repeat;
       }
     }

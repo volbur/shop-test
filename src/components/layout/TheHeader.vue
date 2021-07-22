@@ -3,7 +3,7 @@
     <a href="#"
       ><img
         class="icon-row"
-        src="../../assets/img/icons/icon-row.png"
+        src="../../assets/img/icon-row.png"
         alt="icon row"
       />
       <span>BACK</span>
@@ -12,7 +12,7 @@
     <a href="#"
       ><img
         class="icon-home"
-        src="../../assets/img/icons/icon-home.png"
+        src="../../assets/img/icon-home.png"
         alt="icon home"
       />
       <span>HOME</span>
