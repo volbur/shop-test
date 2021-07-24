@@ -1,26 +1,18 @@
 <template>
   <TheHeader />
   <main class="main">
-    <div class="container">
-      <TabsList />
-      <NezerCrystals />
-      <NezerCoins />
-    </div>
+    <Tabs />
   </main>
 </template>
 
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
-import TabsList from "./components/tabs/TabsList.vue";
-import NezerCrystals from "./components/NezerCrystals.vue";
-import NezerCoins from "./components/NezerCoins.vue";
+import Tabs from "./components/tabs/Tabs.vue";
 
 export default {
   components: {
     TheHeader,
-    TabsList,
-    NezerCrystals,
-    NezerCoins,
+    Tabs,
   },
 };
 </script>
@@ -57,13 +49,7 @@ img {
     padding-top: 90px;
     background-image: url("./assets/img/main-bg-desktop.jpg");
   }
-  .container {
-    margin: 0 auto;
-    width: 980px;
-  }
 }
 </style>
 
-/*TODO:
-*Перемістити зображення в папку img
-*/
+

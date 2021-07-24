@@ -13,7 +13,7 @@
         <div class="button__price">{{ price }}</div>
       </div>
     </button>
-    <div class="ribbons">
+    <div class="ribbons" :class="{ hidden: !bonus }">
       <div class="ribbons__price">{{ bonus }}</div>
     </div>
   </li>
@@ -26,11 +26,15 @@ export default {
 </script>
 
 <style lang="scss">
+.hidden {
+  display: none;
+}
 .card-item {
   position: relative;
+  height: 170px;
   padding-top: 20px;
   border-radius: 23px;
-  background: url("../assets/img/bg-card.png") center center/cover no-repeat;
+  background: url("../../assets/img/bg-card.png") center center/cover no-repeat;
   list-style: none;
   overflow: hidden;
   &__img {
@@ -73,7 +77,7 @@ export default {
     &__icon {
       width: 17px;
       height: 17px;
-      background: url("../assets/img/icon-crystals-mobile.png") center
+      background: url("../../assets/img/icon-crystals-mobile.png") center
         center/cover no-repeat;
     }
   }
@@ -102,73 +106,57 @@ export default {
         display: inline-block;
         width: 14px;
         height: 14px;
-        background: url("../assets/img/icon-one-coin-mobile.png") center
+        background: url("../../assets/img/icon-one-coin-mobile.png") center
           center/cover no-repeat;
       }
     }
   }
+}
 
-  @media (min-width: 1366px) {
-    .card-item {
-      &__quantity {
-        font-size: 30px;
-        line-height: 48px;
-      }
-      &__title {
-        font-size: 14px;
-        line-height: 22px;
-      }
+@media (min-width: 1366px) {
+  .card-item {
+    height: 300px;
+    &__quantity {
+      font-size: 30px;
+      line-height: 48px;
     }
-    .button {
-      margin: 24px auto 0;
-      padding: 0 30px;
-      width: 154px;
-      height: 48px;
+    &__title {
       font-size: 14px;
-      line-height: 16px;
-      //   position: relative;
-      //   &::after {
-      //     position: absolute;
-      //     top: 0;
-      //     left: 0;
-      //     content: "";
-      //     display: inline-block;
-      //     width: 100%;
-      //     height: 100%;
-      //     padding: 3px;
-      //     background: linear-gradient(90deg, #242333 0%, #3c3b53 100%);
-      //     border-radius: 146px;
-      //   }
-      &__icon {
-        margin-right: 4px;
-        width: 8px;
-        height: 14px;
-        background-image: url("../assets/img/$.png");
-      }
+      line-height: 22px;
     }
-    .ribbons {
-      width: 120px;
-      height: 30px;
-      &__price {
-        font-size: 13px;
-        line-height: 30px;
-        &::before {
-          top: 7px;
-          left: 34px;
-          width: 17px;
-          height: 17px;
-          background-image: url("../assets/img/icon-one-coin-desktop.png");
-        }
+  }
+  .button {
+    margin: 24px auto 0;
+    padding: 0 30px;
+    width: 154px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 16px;
+    background: linear-gradient(90deg, #242333 0%, #3c3b53 100%);
+    &__wrapper {
+      background: linear-gradient(90deg, #682fbd 0%, #cb4cbc 100%);
+    }
+    &__icon {
+      margin-right: 4px;
+      width: 8px;
+      height: 14px;
+      background-image: url("../../assets/img/$.png");
+    }
+  }
+  .ribbons {
+    width: 120px;
+    height: 30px;
+    &__price {
+      font-size: 13px;
+      line-height: 30px;
+      &::before {
+        top: 7px;
+        left: 34px;
+        width: 17px;
+        height: 17px;
+        background-image: url("../../assets/img/icon-one-coin-desktop.png");
       }
     }
   }
 }
 </style>
-
-/*FIXME:
-*Карточки на грідах мають бути однієї висоти
-*/
-
-/*TODO:
-*Кнопка купити на десктопі має гадієнтний бордер
-*/

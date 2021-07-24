@@ -1,0 +1,3 @@
+<template>
+  <h2>Promo codes</h2>
+</template>

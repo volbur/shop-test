@@ -15,23 +15,6 @@
 <script>
 export default {
   props: ["total", "url", "alt", "title"],
-  // props: {
-  //   total: {
-  //     type: String,
-  //     required: false,
-  //     default: false,
-  //   },
-  //   url: {
-  //     type: Object,
-  //     required: false,
-  //     default: false,
-  //   },
-  //   alt: {
-  //     type: String,
-  //     required: false,
-  //     default: false,
-  //   },
-  // },
 };
 </script>
 
@@ -71,8 +54,8 @@ export default {
         display: inline-block;
         width: 14px;
         height: 14px;
-        background: url("../../assets/img/icon-plus.png") center
-          center/cover no-repeat;
+        background: url("../../assets/img/icon-plus.png") center center/cover
+          no-repeat;
       }
     }
   }
@@ -121,8 +104,3 @@ export default {
   }
 } ;
 </style>
-
-/*FIXME
-*не виходить прописати динамічний шдях для картинки. Почну шукати відповідь тут: https://stackoverflow.com/questions/40491506/vue-js-dynamic-images-not-working?noredirect=1&lq=1
-*зробити настройку для props. Чомусь пише помилки
-*/
