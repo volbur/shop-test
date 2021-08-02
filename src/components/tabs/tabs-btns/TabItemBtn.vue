@@ -6,7 +6,9 @@
       :class="{ active: title === active }"
     >
       {{ title }}
-      <div class="tab-item__btn-border"></div>
+      <div class="tab-item__btn-border">
+        <div></div>
+      </div>
     </button>
   </li>
 </template>
@@ -59,7 +61,16 @@ export default {
 
   .tab-item__btn:hover .tab-item__btn-border,
   .tab-item__btn.active .tab-item__btn-border {
-    background: linear-gradient(90deg, #f52cbf 0%, #ff7c46 100%);
+    padding: 0 15px;
+    background: linear-gradient(
+      90deg,
+      rgba(245, 44, 191, 0.25) 0%,
+      rgba(255, 124, 70, 0.25) 100%
+    );
+    div {
+      height: 100%;
+      background: linear-gradient(90deg, #f52cbf 0%, #ff7c46 100%);
+    }
   }
 }
 @media (min-width: 1366px) {

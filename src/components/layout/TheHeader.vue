@@ -59,7 +59,13 @@ export default {
     a {
       padding: 13px 24px;
       border: 2px solid black;
+      border-image: linear-gradient(
+        to right,
+        rgba(151, 148, 198, 0.1) 0%,
+        transparent 100%
+      );
       border-radius: 50px;
+      border-image-slice: 1;
       span {
         display: block;
         margin-left: 10px;
@@ -73,3 +79,7 @@ export default {
   }
 }
 </style>
+
+/*FIXME:
+*Бордер для кнопок не заокруглюється
+*/

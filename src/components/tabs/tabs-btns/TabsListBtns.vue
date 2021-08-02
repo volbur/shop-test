@@ -35,6 +35,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(5, auto);
   height: 48px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1366px) {

@@ -127,11 +127,6 @@ export default {
 
 <style lang="scss">
 .nazer-crystals {
-  background-color: #181723;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  margin: 10px auto 0;
-  width: 280px;
   padding: 18px 11px;
 }
 .cards-list {
@@ -140,12 +135,16 @@ export default {
   gap: 10px;
 }
 
+@media (min-width: 768px) {
+  .cards-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
 @media (min-width: 1366px) {
   .nazer-crystals {
-    margin-top: 0;
     padding: 24px 26px;
-    width: 980px;
-    border-radius: 0;
   }
   .cards-list {
     grid-template-columns: repeat(4, 1fr);
@@ -154,3 +153,6 @@ export default {
   }
 }
 </style>
+
+/*FIXME: 
+*медіа правило з 768px не виходить перестрщїти колонки для грідів. Інші властивості прописуються

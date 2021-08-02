@@ -118,12 +118,8 @@ export default {
 
 <style lang="scss">
 .nazer-coins {
-  background-color: #181723;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
-  border-radius: 0 0 10px 10px;
-  margin: 0 auto;
-  width: 280px;
   padding: 18px 11px;
+  border-top: 1px solid #9794c6;
 }
 .cards-list {
   display: grid;
@@ -133,9 +129,7 @@ export default {
 
 @media (min-width: 1366px) {
   .nazer-coins {
-    width: 980px;
     padding: 24px 26px;
-    border-radius: 0 0 10px 10px;
   }
   .cards-list {
     grid-template-columns: repeat(4, 1fr);
