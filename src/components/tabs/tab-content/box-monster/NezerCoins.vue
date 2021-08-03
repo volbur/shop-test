@@ -125,11 +125,6 @@ export default {
   padding: 18px 11px;
   border-top: 1px solid #9794c6;
 }
-.cards-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
 
 @media (min-width: 768px) {
   .nazer-coins {
@@ -138,11 +133,6 @@ export default {
 }
 
 @media (min-width: 1366px) {
-  .cards-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 24px;
-  }
 }
 </style>
 
