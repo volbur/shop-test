@@ -2,10 +2,9 @@
   <ul class="tabs-list">
     <TabItem
       v-for="tab in tabs"
-      :key="tab"
-      :title="tab"
-      @click-tab="clickTab"
-      :active="activeTab"
+      :key="tab.title"
+      :title="tab.title"
+      :to="tab.to"
     />
   </ul>
 </template>
@@ -18,14 +17,29 @@ export default {
   },
   data() {
     return {
-      activeTab: "Монстр боксы",
-      tabs: ["Монстр боксы", "Банк", "Наборы", "Спец предложения", "Промо код"],
+      tabs: [
+        {
+          title: "Монстр боксы",
+          to: "/box-monster",
+        },
+        {
+          title: "Банк",
+          to: "/bank",
+        },
+        {
+          title: "Наборы",
+          to: "/sets",
+        },
+        {
+          title: "Спец предложения",
+          to: "/special-offers",
+        },
+        {
+          title: "Промо код",
+          to: "/promo-codes",
+        },
+      ],
     };
-  },
-  methods: {
-    clickTab(title) {
-      this.activeTab = title;
-    },
   },
 };
 </script>

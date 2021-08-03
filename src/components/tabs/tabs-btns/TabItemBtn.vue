@@ -1,26 +1,17 @@
 <template>
   <li class="tab-item">
-    <button
-      class="tab-item__btn"
-      @click="clickTab"
-      :class="{ active: title === active }"
-    >
+    <router-link :to="to" tag="button" class="tab-item__btn">
       {{ title }}
       <div class="tab-item__btn-border">
         <div></div>
       </div>
-    </button>
+    </router-link>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["title", "active"],
-  methods: {
-    clickTab() {
-      this.$emit("click-tab", this.title);
-    },
-  },
+  props: ["title", "to"],
 };
 </script>
 
@@ -28,6 +19,7 @@ export default {
 .tab-item {
   background-color: #181723;
   list-style: none;
+  text-align: center;
   &__btn {
     position: relative;
     display: block;
@@ -35,11 +27,9 @@ export default {
     height: 100%;
     font-weight: bold;
     font-size: 14px;
+    line-height: 48px;
     color: #9794c6;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid transparent;
+    text-decoration: none;
   }
   &:hover {
     color: #fff;
