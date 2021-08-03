@@ -2,7 +2,6 @@
   <section class="tabs">
     <TabsList />
     <div class="wrapper">
-      <!-- <BoxMonster /> -->
       <router-view></router-view>
     </div>
   </section>
