@@ -1,7 +1,7 @@
 <template>
   <li class="card-item">
     <picture>
-      <source media="(min-width: 1366px" :srcset="url.desktop" />
+      <source media="(min-width: 768px" :srcset="url.desktop" />
       <img class="card-item__img" :src="url.mobile" alt="one crystal" />
     </picture>
     <div class="card-item__quantity">{{ quantity }}</div>
@@ -113,6 +113,20 @@ export default {
   }
 }
 
+@media (min-width: 768px) {
+  .card-item {
+    height: 260px;
+    &__quantity {
+      font-size: 30px;
+      line-height: 48px;
+    }
+    &__title {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
 @media (min-width: 1366px) {
   .card-item {
     height: 300px;
@@ -160,3 +174,5 @@ export default {
   }
 }
 </style>
+
+

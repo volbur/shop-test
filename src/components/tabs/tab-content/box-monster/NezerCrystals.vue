@@ -1,7 +1,7 @@
 <template>
   <section class="nazer-crystals">
     <BaseTitle>Кристаллы Незера</BaseTitle>
-    <ul class="cards-list">
+    <CardsList>
       <CardItem
         v-for="card in cards"
         :key="card.id"
@@ -11,12 +11,17 @@
         :url="card.url"
         :bonus="card.bonus"
       />
-    </ul>
+    </CardsList>
   </section>
 </template>
 
 <script>
+import CardsList from "../CardsList.vue";
+
 export default {
+  components: {
+    CardsList,
+  },
   data() {
     return {
       cards: [
@@ -129,28 +134,14 @@ export default {
 .nazer-crystals {
   padding: 18px 11px;
 }
-.cards-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    background-color: red;
+
+@media (min-width: 768px) {
+  .nazer-crystals {
+    padding: 24px 26px;
   }
 }
 
 @media (min-width: 1366px) {
-  .nazer-crystals {
-    padding: 24px 26px;
-  }
-  .cards-list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 24px;
-  }
 }
 </style>
 
-/*FIXME: 
-*медіа правило з 768px не виходить перестрщїти колонки для грідів. Інші властивості прописуються

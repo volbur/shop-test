@@ -4,8 +4,6 @@
     <main class="main">
       <Tabs />
     </main>
-    <!-- <div class="bg-img"></div>
-    <div class="bg-black-color"></div> -->
   </div>
 </template>
 
@@ -46,17 +44,21 @@ img {
   background: url("./assets/img/main-bg-mobile.jpg") center/cover no-repeat;
 }
 
+@media (min-width: 768px) {
+  .wrapper-main {
+    background-image: url("./assets/img/main-bg-desktop.jpg");
+  }
+}
+
 @media (min-width: 1366px) {
   .wrapper-main {
-    background: url("./assets/img/main-bg-desktop.jpg") top center no-repeat,
+    background: url("./assets/img/main-bg-desktop.jpg") top center/contain
+        no-repeat,
       #16151f;
   }
 }
 </style>
 
-/*ASK:
-*для контейнера wrapper-main фон при мобілці зазначив cover а для десктопа contain правильно?
-*/
 
 
 

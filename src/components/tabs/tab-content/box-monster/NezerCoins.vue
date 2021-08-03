@@ -1,7 +1,7 @@
 <template>
   <section class="nazer-coins">
     <BaseTitle>Монеты Незера</BaseTitle>
-    <ul class="cards-list">
+    <CardsList>
       <CardItem
         v-for="card in cards"
         :key="card.id"
@@ -11,12 +11,16 @@
         :url="card.url"
         :bonus="card.bonus"
       />
-    </ul>
+    </CardsList>
   </section>
 </template>
 
 <script>
+import CardsList from "../CardsList.vue";
 export default {
+  components: {
+    CardsList,
+  },
   data() {
     return {
       cards: [
@@ -127,10 +131,13 @@ export default {
   gap: 10px;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .nazer-coins {
     padding: 24px 26px;
   }
+}
+
+@media (min-width: 1366px) {
   .cards-list {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
