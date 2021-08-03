@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .purse-list {
   display: flex;
   justify-content: space-between;

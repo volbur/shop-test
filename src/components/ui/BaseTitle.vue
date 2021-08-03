@@ -4,7 +4,7 @@
   </h2>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h2 {
   display: none;
   font-weight: bold;

@@ -1,11 +1,11 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper-main">
     <TheHeader />
     <main class="main">
       <Tabs />
     </main>
-    <div class="bg-img"></div>
-    <div class="bg-black-color"></div>
+    <!-- <div class="bg-img"></div>
+    <div class="bg-black-color"></div> -->
   </div>
 </template>
 
@@ -41,42 +41,22 @@ img {
   object-fit: cover;
 }
 
-.wrapper {
+.wrapper-main {
   position: relative;
-}
-
-.bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("./assets/img/main-bg-mobile.jpg") center center/cover
-    no-repeat;
-  z-index: -1;
-}
-
-.bg-black-color {
-  display: none;
+  background: url("./assets/img/main-bg-mobile.jpg") center/cover no-repeat;
 }
 
 @media (min-width: 1366px) {
-  .bg-img {
-    height: 880px;
-    background-image: url("./assets/img/main-bg-desktop.jpg");
-  }
-  .bg-black-color {
-    position: absolute;
-    top: 880px;
-    left: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-color: #16151f;
-    z-index: -1;
+  .wrapper-main {
+    background: url("./assets/img/main-bg-desktop.jpg") top center no-repeat,
+      #16151f;
   }
 }
 </style>
+
+/*ASK:
+*для контейнера wrapper-main фон при мобілці зазначив cover а для десктопа contain правильно?
+*/
 
 
 

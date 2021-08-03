@@ -116,7 +116,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nazer-coins {
   padding: 18px 11px;
   border-top: 1px solid #9794c6;

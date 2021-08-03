@@ -125,7 +125,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nazer-crystals {
   padding: 18px 11px;
 }
@@ -133,12 +133,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-}
-
-@media (min-width: 768px) {
-  .cards-list {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    background-color: red;
   }
 }
 

@@ -64,11 +64,11 @@ export default {
   }
 }
 
-/* @media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .wrapper {
     overflow: scroll;
   }
-} */
+}
 </style>
 
 /*FIXME:
