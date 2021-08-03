@@ -2,19 +2,18 @@
   <section class="tabs">
     <TabsList />
     <div class="wrapper">
-      <BoxMonster />
+      <!-- <BoxMonster /> -->
+      <router-view></router-view>
     </div>
   </section>
 </template>
 
 <script>
 import TabsList from "./tabs-btns/TabsListBtns.vue";
-import BoxMonster from "./tab-content/box-monster/BoxMonster.vue";
 
 export default {
   components: {
     TabsList,
-    BoxMonster,
   },
 };
 </script>
