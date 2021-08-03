@@ -1,11 +1,6 @@
 <template>
   <ul class="tabs-list">
-    <TabItem
-      v-for="tab in tabs"
-      :key="tab.title"
-      :title="tab.title"
-      :to="tab.to"
-    />
+    <TabItem v-for="tab in tabs" :key="tab.nameUrl" :tab="tab" />
   </ul>
 </template>
 
@@ -20,23 +15,23 @@ export default {
       tabs: [
         {
           title: "Монстр боксы",
-          to: "/box-monster",
+          nameUrl: "BoxMonster",
         },
         {
           title: "Банк",
-          to: "/bank",
+          nameUrl: "Bank",
         },
         {
           title: "Наборы",
-          to: "/sets",
+          nameUrl: "Sets",
         },
         {
           title: "Спец предложения",
-          to: "/special-offers",
+          nameUrl: "SpecialOffers",
         },
         {
           title: "Промо код",
-          to: "/promo-codes",
+          nameUrl: "PromoCodes",
         },
       ],
     };

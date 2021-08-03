@@ -129,8 +129,5 @@ export default {
     padding: 24px 26px;
   }
 }
-
-@media (min-width: 1366px) {
-}
 </style>
 

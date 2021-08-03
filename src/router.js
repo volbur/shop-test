@@ -10,11 +10,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", redirect: "/box-monster" },
-    { path: "/box-monster", component: BoxMonster },
-    { path: "/bank", component: Bank },
-    { path: "/promo-codes", component: PromoCodes },
-    { path: "/sets", component: Sets },
-    { path: "/special-offers", component: SpecialOffers }
+    { name: "BoxMonster", path: "/box-monster", component: BoxMonster },
+    { name: "Bank", path: "/bank", component: Bank },
+    { name: "PromoCodes", path: "/promo-codes", component: PromoCodes },
+    { name: "Sets", path: "/sets", component: Sets },
+    { name: "SpecialOffers", path: "/special-offers", component: SpecialOffers }
   ],
   linkActiveClass: "active"
 });

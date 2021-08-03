@@ -1,7 +1,7 @@
 <template>
   <li class="tab-item">
-    <router-link :to="to" tag="button" class="tab-item__btn">
-      {{ title }}
+    <router-link :to="{ name: tab.nameUrl }" tag="button" class="tab-item__btn">
+      {{ tab.title }}
       <div class="tab-item__btn-border">
         <div></div>
       </div>
@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  props: ["title", "to"],
+  props: {
+    tab: {
+      type: Object,
+      require: true,
+    },
+  },
 };
 </script>
 

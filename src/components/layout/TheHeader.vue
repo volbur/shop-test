@@ -1,6 +1,6 @@
 <template>
   <header class="main-header">
-    <a href="#"
+    <a class="link-left" href="#"
       ><img
         class="icon-row"
         src="../../assets/img/icon-row.png"
@@ -9,7 +9,7 @@
       <span>BACK</span>
     </a>
     <Purse />
-    <a href="#"
+    <a class="link-right" href="#"
       ><img
         class="icon-home"
         src="../../assets/img/icon-home.png"
@@ -41,6 +41,7 @@ export default {
   a {
     display: flex;
     align-items: center;
+    text-decoration: none;
     span {
       display: none;
     }
@@ -58,14 +59,6 @@ export default {
     z-index: 1000;
     a {
       padding: 13px 24px;
-      border: 2px solid black;
-      border-image: linear-gradient(
-        to right,
-        rgba(151, 148, 198, 0.1) 0%,
-        transparent 100%
-      );
-      border-radius: 50px;
-      border-image-slice: 1;
       span {
         display: block;
         margin-left: 10px;
@@ -77,9 +70,12 @@ export default {
       }
     }
   }
+  .link-left {
+    background: url("../../assets/img/border-left.svg") center/contain no-repeat;
+  }
+  .link-right {
+    background: url("../../assets/img/border-right.svg") center/contain
+      no-repeat;
+  }
 }
 </style>
-
-/*FIXME:
-*Бордер для кнопок не заокруглюється
-*/
