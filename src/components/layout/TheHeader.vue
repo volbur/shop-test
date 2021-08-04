@@ -1,22 +1,26 @@
 <template>
   <header class="main-header">
-    <a class="link-left" href="#"
-      ><img
-        class="icon-row"
-        src="../../assets/img/icon-row.png"
-        alt="icon row"
-      />
-      <span>BACK</span>
-    </a>
+    <router-link to="/#" custom v-slot="{ navigate }">
+      <button @click="navigate" class="btn-left">
+        <img
+          class="icon-row"
+          src="../../assets/img/icon-row.png"
+          alt="icon row"
+        />
+        <span>BACK</span>
+      </button>
+    </router-link>
     <Purse />
-    <a class="link-right" href="#"
-      ><img
-        class="icon-home"
-        src="../../assets/img/icon-home.png"
-        alt="icon home"
-      />
-      <span>HOME</span>
-    </a>
+    <router-link to="/#" custom v-slot="{ navigate }">
+      <button @click="navigate" class="btn-right">
+        <img
+          class="icon-row"
+          src="../../assets/img/icon-home.png"
+          alt="icon home"
+        />
+        <span>BACK</span>
+      </button>
+    </router-link>
   </header>
 </template>
 
@@ -38,10 +42,11 @@ export default {
   width: 100%;
   height: 50px;
   background-color: rgb(36, 35, 50);
-  a {
+  button {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
     span {
       display: none;
     }
@@ -57,7 +62,7 @@ export default {
     height: 90px;
     background: rgba(36, 35, 50, 0.7);
     z-index: 1000;
-    a {
+    button {
       padding: 13px 24px;
       span {
         display: block;
@@ -70,10 +75,10 @@ export default {
       }
     }
   }
-  .link-left {
+  .btn-left {
     background: url("../../assets/img/border-left.svg") center/contain no-repeat;
   }
-  .link-right {
+  .btn-right {
     background: url("../../assets/img/border-right.svg") center/contain
       no-repeat;
   }
