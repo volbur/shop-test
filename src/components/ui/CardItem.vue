@@ -54,32 +54,32 @@ export default {
     line-height: 18px;
     color: #fff;
   }
-
-  .button {
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px auto 0;
+  padding: 0 10px;
+  width: 98px;
+  height: 27px;
+  border: none;
+  outline: none;
+  border-radius: 146px;
+  font-weight: bold;
+  font-size: 11px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #682fbd 0%, #cb4cbc 100%);
+  cursor: pointer;
+  &__price-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 7px auto 0;
-    padding: 0 10px;
-    width: 98px;
-    height: 27px;
-    border: none;
-    border-radius: 146px;
-    font-weight: bold;
-    font-size: 11px;
-    color: #ffffff;
-    background: linear-gradient(90deg, #682fbd 0%, #cb4cbc 100%);
-    cursor: pointer;
-    &__price-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    &__icon {
-      width: 17px;
-      height: 17px;
-      background: url("../../assets/img/icon-crystals-mobile.png") center
-        center/cover no-repeat;
-    }
+  }
+  &__icon {
+    width: 17px;
+    height: 17px;
+    background: url("../../assets/img/icon-crystals-mobile.png") center
+      center/cover no-repeat;
   }
 
   .ribbons {
@@ -154,7 +154,7 @@ export default {
       margin-right: 4px;
       width: 8px;
       height: 14px;
-      background-image: url("../../assets/img/$.png");
+      background-image: url("../../assets/img/$.svg");
     }
   }
   .ribbons {

@@ -44,6 +44,7 @@ export default {
     line-height: 48px;
     color: #9794c6;
     border: none;
+    outline: none;
     background-color: transparent;
     cursor: pointer;
   }

@@ -44,6 +44,7 @@ export default {
     border: none;
     cursor: pointer;
     background-color: transparent;
+    outline: none;
     span {
       display: none;
     }
