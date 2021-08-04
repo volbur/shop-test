@@ -2,15 +2,7 @@
   <section class="nazer-crystals">
     <BaseTitle>Кристаллы Незера</BaseTitle>
     <CardsList>
-      <CardItem
-        v-for="card in cards"
-        :key="card.id"
-        :title="card.title"
-        :quantity="card.quantity"
-        :price="card.price"
-        :url="card.url"
-        :bonus="card.bonus"
-      />
+      <CardItem v-for="card in cards" :key="card.id" :card="card" />
     </CardsList>
   </section>
 </template>

@@ -1,11 +1,11 @@
 <template>
   <li class="card-item">
     <picture>
-      <source media="(min-width: 768px" :srcset="url.desktop" />
-      <img class="card-item__img" :src="url.mobile" alt="one crystal" />
+      <source media="(min-width: 768px" :srcset="card.url.desktop" />
+      <img class="card-item__img" :src="card.url.mobile" alt="one crystal" />
     </picture>
-    <div class="card-item__quantity">{{ quantity }}</div>
-    <h3 class="card-item__title">{{ title }}</h3>
+    <div class="card-item__quantity">{{ card.quantity }}</div>
+    <h3 class="card-item__title">{{ card.title }}</h3>
     <button class="card-item__button button">
       <div class="button__wrapper">
         <div class="button__title">Купить</div>
@@ -19,19 +19,19 @@
               />
             </picture>
           </div>
-          <div class="button__price">{{ price }}</div>
+          <div class="button__price">{{ card.price }}</div>
         </div>
       </div>
     </button>
-    <div class="ribbons" :class="{ hidden: !bonus }">
-      <div class="ribbons__price">{{ bonus }}</div>
+    <div class="ribbons" :class="{ hidden: !card.bonus }">
+      <div class="ribbons__price">{{ card.bonus }}</div>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ["title", "quantity", "price", "url", "bonus"],
+  props: ["card"],
 };
 </script>
 

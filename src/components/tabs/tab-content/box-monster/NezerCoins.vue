@@ -5,11 +5,7 @@
       <CardItem
         v-for="card in cards"
         :key="card.id"
-        :title="card.title"
-        :quantity="card.quantity"
-        :price="card.price"
-        :url="card.url"
-        :bonus="card.bonus"
+        :card="card"
       />
     </CardsList>
   </section>
