@@ -21,8 +21,8 @@ export default {
         {
           title: "Coins",
           url: {
-            mobile: require("../../assets/img/icon-coins-mobile.png"),
-            desktop: require("../../assets/img/icon-coins-desktop.png"),
+            mobile: require("@/assets/img/icon-coins-mobile.png"),
+            desktop: require("@/assets/img/icon-coins-desktop.png"),
           },
           alt: "icon coins",
           total: "100,5k",
@@ -30,8 +30,8 @@ export default {
         {
           title: "Crystals",
           url: {
-            mobile: require("../../assets/img/icon-crystals-mobile.png"),
-            desktop: require("../../assets/img/icon-crystals-desktop.png"),
+            mobile: require("@/assets/img/icon-crystals-mobile.png"),
+            desktop: require("@/assets/img/icon-crystals-desktop.png"),
           },
           alt: "icon crystals",
           total: "1 253",
