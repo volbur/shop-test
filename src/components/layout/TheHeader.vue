@@ -14,7 +14,7 @@
           src="@/assets/img/icon-home.svg"
           alt="icon home"
         />
-        <span>BACK</span>
+        <span>HOME</span>
       </button>
     </router-link>
   </header>
