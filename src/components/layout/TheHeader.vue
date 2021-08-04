@@ -2,11 +2,7 @@
   <header class="main-header">
     <router-link to="/#" custom v-slot="{ navigate }">
       <button @click="navigate" class="btn-left">
-        <img
-          class="icon-row"
-          src="../../assets/img/icon-row.png"
-          alt="icon row"
-        />
+        <img class="icon-row" src="@/assets/img/icon-row.svg" alt="icon row" />
         <span>BACK</span>
       </button>
     </router-link>
@@ -15,7 +11,7 @@
       <button @click="navigate" class="btn-right">
         <img
           class="icon-row"
-          src="../../assets/img/icon-home.png"
+          src="@/assets/img/icon-home.svg"
           alt="icon home"
         />
         <span>BACK</span>
@@ -47,6 +43,7 @@ export default {
     align-items: center;
     border: none;
     cursor: pointer;
+    background-color: transparent;
     span {
       display: none;
     }

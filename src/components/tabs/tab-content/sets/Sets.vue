@@ -1,16 +1,16 @@
 <template>
-  <NezerCrystals />
-  <NezerCoins />
+  <SetsCrystals />
+  <SetsCoins />
 </template>
 
 <script>
-import NezerCrystals from "./NezerCrystals.vue";
-import NezerCoins from "./NezerCoins.vue";
+import SetsCrystals from "./SetsCrystals.vue";
+import SetsCoins from "./SetsCoins.vue";
 
 export default {
   components: {
-    NezerCrystals,
-    NezerCoins,
+    SetsCrystals,
+    SetsCoins,
   },
 };
 </script>

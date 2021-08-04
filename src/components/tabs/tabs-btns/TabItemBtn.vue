@@ -1,10 +1,19 @@
 <template>
   <li class="tab-item">
-    <router-link :to="{ name: tab.nameUrl }" tag="button" class="tab-item__btn">
-      {{ tab.title }}
-      <div class="tab-item__btn-border">
-        <div></div>
-      </div>
+    <router-link
+      custom
+      v-slot="{ navigate, isActive }"
+      :to="{ name: tab.nameUrl }"
+    >
+      <button
+        @click="navigate"
+        :class="['tab-item__btn', { active: isActive }]"
+      >
+        {{ tab.title }}
+        <div class="tab-item__btn-border">
+          <div></div>
+        </div>
+      </button>
     </router-link>
   </li>
 </template>
@@ -34,7 +43,9 @@ export default {
     font-size: 14px;
     line-height: 48px;
     color: #9794c6;
-    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
   &:hover {
     color: #fff;
