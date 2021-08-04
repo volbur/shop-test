@@ -25,10 +25,26 @@ export default {
   margin: 0 auto;
   max-height: 507px;
   width: 280px;
-  overflow: scroll;
+  overflow-y: auto;
   background-color: #181723;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #4b4a52;
+    &:hover {
+      background: linear-gradient(to top, #682fbd 0%, #cb4cbc 100%);
+    }
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
 }
 
 @media (min-width: 768px) {
