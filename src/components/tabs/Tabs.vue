@@ -23,7 +23,7 @@ export default {
 }
 .wrapper {
   margin: 0 auto;
-  max-height: 507px;
+  height: calc(100vh - 122px);
   width: 280px;
   overflow-y: auto;
   background-color: #181723;
@@ -45,6 +45,17 @@ export default {
     border-radius: 10px;
     background-color: #f5f5f5;
   }
+  // &::after {
+  //   position: absolute;
+  //   bottom: 24px;
+  //   left: 0;
+  //   content: "";
+  //   display: inline-block;
+  //   width: 100%;
+  //   height: 132px;
+  //   background: linear-gradient(180deg, rgba(38, 36, 53, 0) 0%, #262435 100%);
+  //   border-radius: 10px;
+  // }
 }
 
 @media (min-width: 768px) {
@@ -59,7 +70,7 @@ export default {
   }
   .wrapper {
     width: 980px;
-    max-height: unset;
+    height: 100%;
     overflow: visible;
   }
 }

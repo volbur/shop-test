@@ -1,9 +1,11 @@
 <template>
   <li class="card-item">
-    <picture>
-      <source media="(min-width: 768px" :srcset="card.url.desktop" />
-      <img class="card-item__img" :src="card.url.mobile" alt="one crystal" />
-    </picture>
+    <div class="card-item__img">
+      <picture>
+        <source media="(min-width: 768px" :srcset="card.url.desktop" />
+        <img :src="card.url.mobile" alt="one crystal" />
+      </picture>
+    </div>
     <div class="card-item__quantity">{{ card.quantity }}</div>
     <h3 class="card-item__title">{{ card.title }}</h3>
     <button class="card-item__button button">
@@ -49,8 +51,9 @@ export default {
   overflow: hidden;
   text-align: center;
   &__img {
-    display: block;
     margin: 0 auto;
+    // width: 87px;
+    // height: 48px;
   }
   &__quantity {
     text-align: center;
