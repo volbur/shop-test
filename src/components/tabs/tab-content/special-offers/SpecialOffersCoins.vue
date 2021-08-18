@@ -2,11 +2,7 @@
   <section class="nazer-coins">
     <BaseTitle>Спец предложения Монеты</BaseTitle>
     <CardsList>
-      <CardItem
-        v-for="card in cards"
-        :key="card.id"
-        :card="card"
-      />
+      <CardItem v-for="card in cards" :key="card.id" :card="card" />
     </CardsList>
   </section>
 </template>
@@ -26,7 +22,7 @@ export default {
           quantity: "x500",
           price: 10,
           url: {
-            mobile: require("@/assets/img/coins-5000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-5000.png"),
           },
         },
@@ -36,7 +32,7 @@ export default {
           quantity: "x100",
           price: 2,
           url: {
-            mobile: require("@/assets/img/coins-1000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-1000.png"),
           },
         },
@@ -46,7 +42,7 @@ export default {
           quantity: "x1500",
           price: 5,
           url: {
-            mobile: require("@/assets/img/coins-5000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-5000.png"),
           },
         },
@@ -56,7 +52,7 @@ export default {
           quantity: "x1000",
           price: 4,
           url: {
-            mobile: require("@/assets/img/coins-10000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-10000.png"),
           },
         },
@@ -66,7 +62,7 @@ export default {
           quantity: "x1500",
           price: 2,
           url: {
-            mobile: require("@/assets/img/coins-in-big-bag.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-in-big-bag.png"),
           },
         },
@@ -76,7 +72,7 @@ export default {
           quantity: "x100",
           price: 3,
           url: {
-            mobile: require("@/assets/img/coins-in-chest.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-in-chest.png"),
           },
         },
@@ -86,7 +82,7 @@ export default {
           quantity: "x1500",
           price: 7,
           url: {
-            mobile: require("@/assets/img/coins-more-10000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-more-10000.png"),
           },
         },
@@ -96,7 +92,7 @@ export default {
           quantity: "x1000",
           price: 5,
           url: {
-            mobile: require("@/assets/img/coins-5000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-5000.png"),
           },
         },
@@ -106,7 +102,7 @@ export default {
           quantity: "x100",
           price: 10,
           url: {
-            mobile: require("@/assets/img/coins-1000.png"),
+            mobile: require("@/assets/img/one-crystal-mobile.png"),
             desktop: require("@/assets/img/coins-1000.png"),
           },
         },

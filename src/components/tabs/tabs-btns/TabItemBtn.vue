@@ -58,6 +58,7 @@ export default {
     left: 0;
     width: 100%;
     height: 3px;
+    z-index: 1;
   }
 
   .tab-item__btn:hover,

@@ -15,8 +15,7 @@ const router = createRouter({
     { name: "PromoCodes", path: "/promo-codes", component: PromoCodes },
     { name: "Sets", path: "/sets", component: Sets },
     { name: "SpecialOffers", path: "/special-offers", component: SpecialOffers }
-  ],
-  linkActiveClass: "active"
+  ]
 });
 
 export default router;

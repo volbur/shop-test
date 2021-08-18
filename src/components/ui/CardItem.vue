@@ -1,11 +1,9 @@
 <template>
-  <li class="card-item">
-    <div class="card-item__img">
-      <picture>
-        <source media="(min-width: 768px" :srcset="card.url.desktop" />
-        <img :src="card.url.mobile" alt="one crystal" />
-      </picture>
-    </div>
+  <li v-if="card" class="card-item">
+    <picture class="card-item__img">
+      <source media="(min-width: 1366px" :srcset="card.url.desktop" />
+      <img :src="card.url.mobile" alt="one crystal" />
+    </picture>
     <div class="card-item__quantity">{{ card.quantity }}</div>
     <h3 class="card-item__title">{{ card.title }}</h3>
     <button class="card-item__button button">
@@ -29,6 +27,7 @@
       <div class="ribbons__price">{{ card.bonus }}</div>
     </div>
   </li>
+  <li v-else>Немає жодної карточки</li>
 </template>
 
 <script>
@@ -51,9 +50,14 @@ export default {
   overflow: hidden;
   text-align: center;
   &__img {
+    display: block;
     margin: 0 auto;
-    // width: 87px;
-    // height: 48px;
+    width: 87px;
+    height: 48px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__quantity {
     text-align: center;
@@ -148,6 +152,10 @@ export default {
 @media (min-width: 1366px) {
   .card-item {
     height: 300px;
+    &__img {
+      width: 120px;
+      height: 120px;
+    }
     &__quantity {
       font-size: 30px;
       line-height: 48px;

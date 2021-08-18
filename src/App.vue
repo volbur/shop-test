@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper-main">
     <TheHeader />
-    <main class="main">
+    <main class="main red-bg">
       <Tabs />
     </main>
   </div>
@@ -21,10 +21,12 @@ export default {
 
 <style lang="scss">
 @import url("./main.scss");
+@import url("./assets/scss/_variables.scss");
 
 .wrapper-main {
   position: relative;
   background: url("./assets/img/main-bg-mobile.jpg") center/cover no-repeat;
+  // background-color: $bg-color;
 }
 
 @media (min-width: 768px) {
